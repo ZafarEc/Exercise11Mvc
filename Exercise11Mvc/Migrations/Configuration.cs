@@ -19,7 +19,7 @@ namespace Exercise11Mvc.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-            Product pro = new Product() { Name = "Zafar", Price = 2000, Category = "abc", Shelf = "1", Count = 2, Description = "Person" };
+            Product pro = new Product() { Name = "Zafar", Price = 2000, Category = "abc", Shelf = "Human", Count = 2, Description = "Person" };
             context.Products.AddOrUpdate(t => t.Name, pro);
         }
     }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - My ASP.NET Application!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,6 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @*@Html.ActionLink( < img src = "~/Content/images/logo.jpg" /> +"Application Name", "Home", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
@@ -23,9 +24,16 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                    <li>@Html.ActionLink("Out of Stock", "OutOfStock", "Products")</li>
-                    <li>@Html.ActionLink("Electronics", "Electronics", "Products")</li>
+                    <li class="dropdown">
+                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+                       <ul class="dropdown-menu">
+                           @*<li><a href="#">OutOfStock</a></li>*@
+                           <li>@Html.ActionLink("TotalProductInStore", "Index", "Products")</li>
+                           <li>@Html.ActionLink("Out of Stock", "OutOfStock", "Products")</li>
+                           <li>@Html.ActionLink("Electronics", "Electronics", "Products")</li>
+                       </ul>
+                    </li>
+
                 </ul>
             </div>
         </div>
